@@ -1,0 +1,32 @@
+<header class="site-header" role="banner">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="wrapper">
+    <div class="brand">
+      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+      <p class="site-tagline">{{ site.tagline }}</p>
+    </div>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      <ul id="primary-menu">
+      {% for item in site.nav %}
+        <li>
+          <a href="{{ item.url | relative_url }}"
+             class="{% if page.url == item.url or page.url == item.url | append: 'index.html' %}active{% endif %}">
+             {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+// Simple accessible menu toggle for small screens
+const btn = document.currentScript.previousElementSibling.querySelector('.menu-toggle');
+const menu = document.getElementById('primary-menu');
+btn.addEventListener('click', () => {
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!expanded));
+  menu.classList.toggle('open');
+});
+</script>

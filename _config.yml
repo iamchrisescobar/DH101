@@ -1,0 +1,24 @@
+title: Impact of Social Networks on College Students' Mental Health
+tagline: A DH project exploring sources, processing, and presentation
+description: An exploratory digital humanities project studying how social networks shape mental health among college students.
+baseurl: "" # for user/username.github.io repo keep empty; for project repos set to "/reponame"
+url: ""     # set to "https://<username>.github.io" after publishing if desired
+
+theme: null
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: About Us
+    url: /about/
+  - title: Data Critique
+    url: /data-critique/
+  - title: History
+    url: /history/
+  - title: Bibliography
+    url: /bibliography/
